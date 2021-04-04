@@ -11,5 +11,5 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.72.0
-RUN apt-get install libpangocairo-1.0-0
+RUN apt-get install libpangocairo-1.0-0 pango1.0-tests
 ENTRYPOINT ["serverless"]
