@@ -12,5 +12,6 @@ LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.72.0
 RUN apt-get update
+RUN apt-get install -y gawk
 RUN wget http://ftp.gnu.org/gnu/glibc/glibc-2.25.tar.gz ; tar zxf glibc-2.25.tar.gz ; cd glibc-2.25/ ; mkdir build ; cd build/ ; ../configure --prefix=/usr ; make -j4 ; make install
 ENTRYPOINT ["serverless"]
