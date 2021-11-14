@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.8-nodejs14
+FROM nikolaik/python-nodejs:python3.7-nodejs12
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
@@ -10,7 +10,7 @@ LABEL "com.github.actions.description"="Wraps the Serverless Frameork to enable 
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.72.0
+RUN npm i -g serverless@2.66.1
 RUN apt-get update
 RUN apt-get install -y gawk
 RUN wget http://ftp.gnu.org/gnu/glibc/glibc-2.25.tar.gz ; tar zxf glibc-2.25.tar.gz ; cd glibc-2.25/ ; mkdir build ; cd build/ ; ../configure --prefix=/usr ; make install
