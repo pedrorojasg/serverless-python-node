@@ -11,4 +11,4 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.72.0
-CMD ["bash","-c","echo b && echo c; while true; do sleep 5; echo sleep; done"];
+CMD while true; do sleep 1000; done
