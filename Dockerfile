@@ -15,7 +15,7 @@ RUN apt-get update
 RUN apt-get install -y gawk build-essential
 RUN wget http://ftp.gnu.org/gnu/glibc/glibc-2.25.tar.gz
 RUN tar zxf glibc-2.25.tar.gz
-RUN cd glibc-2.25
+RUN cd glibc-2.25/
 RUN mkdir build
 RUN cd build/
 RUN ../configure --prefix=/usr
