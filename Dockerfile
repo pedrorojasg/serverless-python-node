@@ -18,6 +18,4 @@ RUN tar zxf glibc-2.25.tar.gz
 RUN cd glibc-2.25/
 RUN mkdir build
 RUN cd build/
-RUN ../configure --prefix=/usr
-RUN make install
 ENTRYPOINT ["serverless"]
