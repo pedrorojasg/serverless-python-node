@@ -11,8 +11,6 @@ LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.72.0
-RUN echo 'ping localhost &' > /bootstrap.sh
-RUN echo 'sleep infinity' >> /bootstrap.sh
-RUN chmod +x /bootstrap.sh
-
-CMD /bootstrap.sh
+RUN apt-get update
+RUN apt-get install -y build-essential gawk libc6-dev
+ENTRYPOINT ["serverless"]
