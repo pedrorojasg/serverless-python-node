@@ -12,4 +12,5 @@ LABEL "com.github.actions.color"="red"
 
 RUN npm i -g serverless@1.72.0
 RUN pip install --platform manylinux2010_x86_64 --implementation cp --python 3.7 --only-binary=:all: --upgrade --target awsbundle cryptography
+RUN pip install django-phonenumber-field==6.0.0
 ENTRYPOINT ["serverless"]
