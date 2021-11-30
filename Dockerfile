@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.7-nodejs12
+FROM nikolaik/python-nodejs:python3.9-nodejs16
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
@@ -10,5 +10,5 @@ LABEL "com.github.actions.description"="Wraps the Serverless Frameork to enable 
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
-RUN npm i -g serverless@1.72.0
+RUN npm i -g serverless@1.83.3
 ENTRYPOINT ["serverless"]
